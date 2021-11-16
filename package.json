@@ -1,0 +1,35 @@
+{
+  "name": "@hexlet/code",
+  "version": "0.1.0",
+  "description": "Compares two configuration files and shows a difference.",
+  "main": "index.js",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrFSP/frontend-project-lvl2.git"
+  },
+  "keywords": [
+    "education",
+    "hexlet.io"
+  ],
+  "author": "Pavel Egorov (@MrFSP)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrFSP/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/MrFSP/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^8.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
+  }
+}
