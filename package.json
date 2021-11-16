@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "0.1.0",
+  "description": "Utility, that compares two configuration files and shows a difference.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrFSP/frontend-project-lvl2.git"
+  },
+  "keywords": [
+    "education",
+    "hexlet.io"
+  ],
+  "author": "Pavel Egorov (@MrFSP)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrFSP/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/MrFSP/frontend-project-lvl2#readme"
+}
