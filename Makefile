@@ -12,6 +12,9 @@ uninstall un:
 
 # start
 
+gendiff_json gdjson:
+	node bin/gendiff.js __tests__/__fixtures__/file1.json __tests__/__fixtures__/file2.json
+
 start s:
 	node bin/gendiff.js -h
 
