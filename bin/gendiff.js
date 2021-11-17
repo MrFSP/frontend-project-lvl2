@@ -11,6 +11,8 @@ const program = new Command();
 
 program
   .description(description)
-  .version(`gendiff version: ${version}`, '-v, --version', 'output the version number');
+  .version(`gendiff version: ${version}`, '-v, --version', 'output the version number')
+  .option('-f, --format [type]',
+    'Choose output format.\n\t\t       Types: simple, plain, json.\n\t\t      ', 'simple');
 
 program.parse();
