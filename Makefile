@@ -20,10 +20,10 @@ start s:
 test t:
 	npm test
 
-test-coverage tcw:
+test-coverage tc:
 	npm test -- --coverage
 
-test-coverage tcw:
+tcw:
 	npm test -- --coverage --watch
 
 lint l:
