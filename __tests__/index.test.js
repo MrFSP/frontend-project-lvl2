@@ -7,8 +7,6 @@ import genDiff from '../index.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-console.log(`__dirname: ${__dirname}`);
-
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const fixturePath = getFixturePath('expected.txt');
 const expected = fs.readFileSync(fixturePath, 'utf-8');
