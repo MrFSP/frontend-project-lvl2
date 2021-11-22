@@ -11,7 +11,10 @@ uninstall un:
 
 # start
 gendiff_json gdjson:
-	node bin/gendiff.js __fixtures__/file1.json __fixtures__/file2.json
+	node bin/gendiff.js __fixtures__/before.json __fixtures__/after.json
+
+gendiff_json gdyaml:
+	node bin/gendiff.js __fixtures__/before.yaml __fixtures__/after.yaml
 
 start s:
 	node bin/gendiff.js -h
