@@ -1,5 +1,4 @@
 # install
-
 install i:
 	npm ci
 	npm publish --dry-run
@@ -11,12 +10,24 @@ uninstall un:
 	sudo npm uninstall -g \@hexlet/code
 
 # start
-
 gendiff_json gdjson:
-	node bin/gendiff.js __tests__/__fixtures__/file1.json __tests__/__fixtures__/file2.json
+	node bin/gendiff.js __fixtures__/before.json __fixtures__/after.json
+
+gendiff_json gdyaml:
+	node bin/gendiff.js __fixtures__/before.yaml __fixtures__/after.yaml
 
 start s:
 	node bin/gendiff.js -h
+
+# test
+test t:
+	npm test
+
+test-coverage tc:
+	npm test -- --coverage
+
+tcw:
+	npm test -- --coverage --watch
 
 lint l:
 	npx eslint .

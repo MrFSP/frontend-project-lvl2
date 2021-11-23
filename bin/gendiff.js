@@ -2,7 +2,7 @@
 
 import { Command } from 'commander/esm.mjs';
 import fs from 'fs';
-import genDiff from '../index.js';
+import genDiff from '../src/index.js';
 
 const json = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url)));
 
