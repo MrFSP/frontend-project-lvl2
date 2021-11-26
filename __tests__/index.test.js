@@ -7,20 +7,18 @@ import genDiff from '../src/index.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+const getFixturePath = (filename, extension) => path
+  .join(__dirname, '..', '__fixtures__', `${filename}${extension}`);
 
-test('json files difference', () => {
-  const fixturePath = getFixturePath('expected.json.txt');
-  const expected = fs.readFileSync(fixturePath, 'utf-8');
-  const before = getFixturePath('before.json');
-  const after = getFixturePath('after.json');
-  expect(genDiff(before, after)).toBe(expected);
-});
+const types = ['.json', '.yaml'];
 
-test('yml files difference', () => {
-  const fixturePath = getFixturePath('expected.yaml.txt');
-  const expected = fs.readFileSync(fixturePath, 'utf-8');
-  const before = getFixturePath('before.yaml');
-  const after = getFixturePath('after.yaml');
-  expect(genDiff(before, after)).toBe(expected);
-});
+test.each(types)(
+  '%#  %j',
+  (type) => {
+    const fixturePath1 = getFixturePath('file1', type);
+    const fixturePath2 = getFixturePath('file2', type);
+    const pathToExpected = getFixturePath('expected.stylish', '.txt');
+    const expectedData = fs.readFileSync(pathToExpected, 'utf-8');
+    expect(genDiff(fixturePath1, fixturePath2)).toBe(expectedData);
+  },
+);
