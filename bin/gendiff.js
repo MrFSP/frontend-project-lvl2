@@ -25,8 +25,8 @@ program
   })
   .option(
     '-f, --format [type]',
-    'Choose output format.\n\t\t       Types: simple, plain, json.\n\t\t      ',
-    'simple',
+    'Choose output format.\n\t\t       Types: stylish, plain, json.\n\t\t      ',
+    'stylish',
   );
 
 program.parse();
