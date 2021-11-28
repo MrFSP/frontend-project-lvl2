@@ -18,8 +18,8 @@ program
     'output the version number',
   )
   .arguments('<firstConfig> <secondConfig>')
-  .action((firstConfig, secondConfig) => {
-    const result = genDiff(firstConfig, secondConfig);
+  .action((firstConfig, secondConfig, option) => {
+    const result = genDiff(firstConfig, secondConfig, option.format);
     console.log(result);
     return result;
   })
